@@ -1,6 +1,4 @@
-tensorflow==2.15.0
-spaces
 streamlit
+tensorflow==2.19.1
 pillow
 numpy
-tf_keras

@@ -1,0 +1,19 @@
+# Dataset — do not commit, large and not yours to redistribute
+accident_pics/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Gradio cache
+flagged/
+gradio_cached_examples/

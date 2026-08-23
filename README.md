@@ -40,11 +40,3 @@ gap. See the notebook's confusion matrix for exactly which classes get mixed up.
 
 ## Running the app locally
 
-```bash
-pip install -r requirements.txt
-python app.py
-```
-
-## Live demo
-
-_Add the Hugging Face Spaces link here once deployed._

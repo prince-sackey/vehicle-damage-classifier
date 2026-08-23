@@ -17,7 +17,6 @@ import gradio as gr
 import numpy as np
 import spaces
 import tensorflow as tf
-from tensorflow.keras.applications import mobilenet_v2
 
 IMG_SIZE = (224, 224)
 
@@ -34,7 +33,6 @@ def predict(image):
 
     img = tf.image.resize(image, IMG_SIZE)
     img = tf.expand_dims(img, axis=0)
-    img = mobilenet_v2.preprocess_input(img)
 
     probs = model.predict(img, verbose=0)[0]
     return {CLASS_NAMES[i]: float(probs[i]) for i in range(len(CLASS_NAMES))}

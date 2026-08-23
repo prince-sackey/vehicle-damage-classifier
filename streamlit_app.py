@@ -19,7 +19,6 @@ import numpy as np
 import streamlit as st
 import tensorflow as tf
 from PIL import Image
-from tensorflow.keras.applications import mobilenet_v2
 
 IMG_SIZE = (224, 224)
 
@@ -51,7 +50,6 @@ if uploaded_file is not None:
     img_array = np.array(image)
     img_tensor = tf.image.resize(img_array, IMG_SIZE)
     img_tensor = tf.expand_dims(img_tensor, axis=0)
-    img_tensor = mobilenet_v2.preprocess_input(img_tensor)
 
     probs = model.predict(img_tensor, verbose=0)[0]
     predicted_idx = int(np.argmax(probs))

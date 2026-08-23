@@ -12,6 +12,8 @@ To deploy on Streamlit Community Cloud:
    pointing at this repo and this file (streamlit_app.py).
 3. It builds and serves automatically.
 """
+import os
+os.environ["TF_USE_LEGACY_KERAS"] = "1"
 
 import json
 

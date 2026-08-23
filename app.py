@@ -15,6 +15,7 @@ import json
 
 import gradio as gr
 import numpy as np
+import spaces
 import tensorflow as tf
 from tensorflow.keras.applications import mobilenet_v2
 
@@ -26,6 +27,7 @@ with open("class_names.json") as f:
     CLASS_NAMES = json.load(f)
 
 
+@spaces.GPU
 def predict(image):
     if image is None:
         return {}
@@ -51,4 +53,4 @@ demo = gr.Interface(
 )
 
 if __name__ == "__main__":
-    demo.launch()
+    demo.launch(ssr_mode=False)
